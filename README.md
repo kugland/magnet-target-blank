@@ -1,4 +1,4 @@
-# Magnet Target Blank
+# magnet-target-blank
 
 [![Greasy Fork Version](https://img.shields.io/greasyfork/v/568978)](https://greasyfork.org/en/scripts/568978-magnet-target-blank)
 
