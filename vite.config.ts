@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import monkey from "vite-plugin-monkey";
 import packageJson from "./package.json" with { type: "json" };
+import { MonkeyUserScript } from "vite-plugin-monkey";
 
 let {
   author,
@@ -8,11 +9,7 @@ let {
   homepage,
   license,
   version,
-  userscriptExtra: {
-    grant,
-    match,
-    namespace,
-  },
+  userscriptExtra,
 } = packageJson;
 
 export default defineConfig({
@@ -25,11 +22,8 @@ export default defineConfig({
         homepage,
         license,
         version,
-        // @ts-ignore
-        grant,
-        match,
-        namespace,
-      },
+        ...userscriptExtra,
+      } as MonkeyUserScript,
     }),
   ],
 });
